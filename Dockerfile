@@ -4,7 +4,7 @@ FROM ros:noetic-ros-base-focal
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get install -y xorg openbox xvfb
 RUN apt-get install -y python3-rosdep python3-rosinstall-generator python3-wstool build-essential git python3-pip apt-utils
-RUN apt-get install -y ca-certificates gnupg lsb-core sudo wget cul
+RUN apt-get install -y ca-certificates gnupg lsb-core sudo wget curl
 
 # Add user pi with password raspberry, make it a sudoer
 RUN useradd -m -p saRblwUvaZylg pi
