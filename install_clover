@@ -2,8 +2,7 @@
 
 set -ex # exit on error, echo commands
 
-echo "--- Init rosdep"
-rosdep init
+echo "--- Update rosdep"
 rosdep update
 
 echo "source /usr/share/gazebo/setup.sh" >> ~/.bashrc
