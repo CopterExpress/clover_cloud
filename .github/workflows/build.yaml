@@ -16,11 +16,11 @@ jobs:
       with:
         registry: ghcr.io
         username: ${{ github.actor }}
-        password: ${{ secrets.GHCR_PAT }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
       with:
-        tags: CopterExpress/clover-cloud:latest
+        tags: ghcr.io/copterexpress/clover-cloud:latest
         push: true
     - name: Image digest
       run: echo ${{ steps.docker_build.outputs.digest }}
