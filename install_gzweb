@@ -12,3 +12,5 @@ git clone https://github.com/osrf/gzweb && cd ~/gzweb && git checkout gzweb_1.4.
 source /usr/share/gazebo/setup.sh
 export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:$HOME/catkin_ws/src/clover/clover_simulation/models
 npm run deploy --- -m
+# HACK: make Clover's URDF assets accesible (.dae model files)
+ln -s ~/catkin_ws/src/clover/clover_description/ http/client/assets/
